@@ -8,16 +8,31 @@ body:
     attributes:
       label: Beschreibe den Bug
       description: Was ist das Problem?
-      value: "Ein Bug ist aufgetreten"
+      value: "Ein Bug ist aufgetreten!"
+      placeholder: Beschreibe den Bug
     validations:
       required: true
-# textarea, l:"Beschreibe den Bug", d:Was ist das Problem? v: Ein Bug ist aufgetreten (r:true)
 
-# textarea, l: Wann tritt dieser Bug auf, d: Beschreibe die Schritte, die zu dem Bug führen
+  - type: input
+    attributes:
+      label: Betroffene Datei(en)
+      description: Welche Teile bzw. Dateien in diesem Projekt sind betroffen?
+      placeholder: z.B. index.js, components/TabNav.js und eine andere Beschreibung
 
-# textarea, l: Vorgesehenes Verhalten, d: Wie sollte sich die App eigentlich verhalten?
-
-# textarea, l: Weitere Beschreibungen, d: Gibt es noch etwas zu sagen?
+  - type: textarea
+    attributes:
+      label: Wann tritt dieser Bug auf?
+      placeholder: Beschreibe die Schritte, die zu dem Bug führen.
+  
+  - type: textarea
+    attributes:
+      label: Vorgesehenes Verhalten
+      placeholder: Wie sollte sich die App eigentlich verhalten?
+  
+  - type: textarea
+    attributes:
+      label: Weitere Beschreibungen
+      placeholder: Gibt es noch etwas zu sagen?
 
 # md ## Issue Einstellungen
   # Bitte nimm noch folgende Einstellungen vor:
