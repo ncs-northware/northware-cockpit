@@ -1,0 +1,46 @@
+name: Problem melden
+description: Melde eine Problem mit dem Label invalid
+title: "[Invalid]: "
+labels: ["invalid"]
+
+body:
+  - type: textarea
+    attributes:
+      label: Beschreibe das Problem
+      description: Was ist das Problem?
+      placeholder: Beschreibe das Problem
+    validations:
+      required: true
+
+  - type: input
+    attributes:
+      label: Betroffene Datei(en)
+      description: Welche Teile bzw. Dateien in diesem Projekt sind betroffen?
+      placeholder: z.B. index.js, components/TabNav.js und eine andere Beschreibung
+
+  - type: textarea
+    attributes:
+      label: Wann tritt das Problem auf?
+      placeholder: Beschreibe die Schritte, die zu dem Bug führen.
+  
+  - type: textarea
+    attributes:
+      label: Vorgesehenes Verhalten
+      placeholder: Wie sollte sich die App eigentlich verhalten?
+  
+  - type: textarea
+    attributes:
+      label: Weitere Beschreibungen
+      placeholder: Gibt es noch etwas zu sagen?
+
+  - type: markdown
+    attributes:
+      value: "## Issue Einstellungen"
+  - type: markdown
+    attributes:
+      value: | 
+        Bitte nimm noch folgende Einstellungen vor:
+        - Vergebe das Label `general` wenn es sich um einen Issue handelt, der sich auf die ganze Northware Suite auswirkt.
+        - Vergebe das Label `cockpit` wenn es sich um einen Issue handelt, der nur Northware Cockpit betrifft.
+        - Ordne diesen Issue einem Northware Projekt zu.
+        - Ordne den Issue ggf. einem Milestone zu.
