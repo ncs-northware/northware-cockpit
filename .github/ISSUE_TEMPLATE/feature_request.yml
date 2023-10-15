@@ -4,26 +4,26 @@ labels: ["enhancement"]
 title: "[Add]: "
 
 body:
-    - type: textarea
+  - type: textarea
     attributes:
-        label: Was ist der Plan?
-        placeholder: Beschreibe das gewünschte neue Feature
+      label: Was ist der Plan?
+      placeholder: Beschreibe das gewünschte neue Feature
     validation:
-        required: true
+      required: true
 
-    - type: textarea
+  - type: textarea
     attributes:
-        label: Weitere Beschreibungen
-        placeholder: Gibt es noch etwas zu sagen?
+      label: Weitere Beschreibungen
+      placeholder: Gibt es noch etwas zu sagen?
 
-    - type: markdown
+  - type: markdown
     attributes:
-        value: "## Issue Einstellungen"
-    - type: markdown
+      value: "## Issue Einstellungen"
+  - type: markdown
     attributes:
     value: | 
-        Bitte nimm noch folgende Einstellungen vor:
-        - Vergebe das Label `general` wenn es sich um einen Issue handelt, der sich auf die ganze Northware Suite auswirkt.
-        - Vergebe das Label `cockpit` wenn es sich um einen Issue handelt, der nur Northware Cockpit betrifft.
-        - Ordne diesen Issue einem Northware Projekt zu.
-        - Ordne den Issue ggf. einem Milestone zu.
+      Bitte nimm noch folgende Einstellungen vor:
+      - Vergebe das Label `general` wenn es sich um einen Issue handelt, der sich auf die ganze Northware Suite auswirkt.
+      - Vergebe das Label `cockpit` wenn es sich um einen Issue handelt, der nur Northware Cockpit betrifft.
+      - Ordne diesen Issue einem Northware Projekt zu.
+      - Ordne den Issue ggf. einem Milestone zu.
