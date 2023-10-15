@@ -3,4 +3,44 @@
 # Please see the documentation for all configuration options:
 # https://docs.github.com/github/administering-a-repository/configuration-options-for-dependency-updates
 
-# Will be filled later
+version: 2
+updates:
+  - package-ecosystem: npm
+    directory: "/"
+    shedule:
+      interval: monthly
+    commit-message:
+      prefix: [dependabot/root]
+      prefix-development: [dependabot/root] devDependency
+      include: "scope"
+    labels:
+      - "dependencies"
+      
+  - package-ecosystem: npm
+    directory: "/comdock-api"
+    shedule:
+      interval: weekly
+    groups:
+      strapi:
+        patterns:
+        - "@strapi*"
+    commit-message:
+      prefix: [dependabot/api]
+      prefix-development: [dependabot/api] devDependency
+      include: "scope"
+    labels:
+      - "dependencies"
+      
+  - package-ecosystem: npm
+    directory: "/comdock-frontend"
+    shedule:
+      interval: weekly
+    commit-message:
+      prefix: [dependabot/frontend]
+      prefix-development: [dependabot/frontend] devDependency
+      include: "scope"
+    labels:
+      - "dependencies"
+      
+    
+  
