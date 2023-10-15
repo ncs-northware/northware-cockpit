@@ -1,0 +1,20 @@
+name: Bug melden
+description: Melde einen schwerwiegenden Bug
+title: "[Bug]: "
+labels: ["bug"]
+
+#body:
+# textarea, l:"Beschreibe den Bug", d:Was ist das Problem? v: Ein Bug ist aufgetreten (r:true)
+
+# textarea, l: Wann tritt dieser Bug auf, d: Beschreibe die Schritte, die zu dem Bug führen
+
+# textarea, l: Vorgesehenes Verhalten, d: Wie sollte sich die App eigentlich verhalten?
+
+# textarea, l: Weitere Beschreibungen, d: Gibt es noch etwas zu sagen?
+
+# md ## Issue Einstellungen
+  # Bitte nimm noch folgende Einstellungen vor:
+  # - Vergebe das Label `general` wenn es sich um einen Issue handelt, der sich auf die ganze Northware Suite auswirkt.
+  # - Vergebe das Label `cockpit` wenn es sich um einen Issue handelt, der nur Northware Cockpit betrifft.
+  # - Ordne diesen Issue einem Northware Projekt zu.
+  # - Ordne den Issue ggf. einem Milestone zu.
