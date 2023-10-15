@@ -7,7 +7,7 @@ version: 2
 updates:
   - package-ecosystem: "npm"
     directory: "/"
-    shedule:
+    schedule:
       interval: "monthly"
     commit-message:
       prefix: "[dependabot/root]"
@@ -18,7 +18,7 @@ updates:
       
   - package-ecosystem: "npm"
     directory: "/comdock-api"
-    shedule:
+    schedule:
       interval: "weekly"
     groups:
       strapi:
@@ -33,7 +33,7 @@ updates:
       
   - package-ecosystem: npm
     directory: "/comdock-frontend"
-    shedule:
+    schedule:
       interval: "weekly"
     commit-message:
       prefix: "[dependabot/frontend]"
