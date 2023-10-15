@@ -8,7 +8,7 @@ body:
     attributes:
       label: Was ist der Plan?
       placeholder: Beschreibe das gewünschte neue Feature
-    validation:
+    validations:
       required: true
 
   - type: textarea
@@ -21,9 +21,9 @@ body:
       value: "## Issue Einstellungen"
   - type: markdown
     attributes:
-    value: | 
-      Bitte nimm noch folgende Einstellungen vor:
-      - Vergebe das Label `general` wenn es sich um einen Issue handelt, der sich auf die ganze Northware Suite auswirkt.
-      - Vergebe das Label `cockpit` wenn es sich um einen Issue handelt, der nur Northware Cockpit betrifft.
-      - Ordne diesen Issue einem Northware Projekt zu.
-      - Ordne den Issue ggf. einem Milestone zu.
+      value: | 
+        Bitte nimm noch folgende Einstellungen vor:
+        - Vergebe das Label `general` wenn es sich um einen Issue handelt, der sich auf die ganze Northware Suite auswirkt.
+        - Vergebe das Label `cockpit` wenn es sich um einen Issue handelt, der nur Northware Cockpit betrifft.
+        - Ordne diesen Issue einem Northware Projekt zu.
+        - Ordne den Issue ggf. einem Milestone zu.
