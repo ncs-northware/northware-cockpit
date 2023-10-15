@@ -3,7 +3,14 @@ description: Melde einen schwerwiegenden Bug
 title: "[Bug]: "
 labels: ["bug"]
 
-#body:
+body:
+  - type: textarea
+    attributes:
+      label: Beschreibe den Bug
+      description: Was ist das Problem?
+      value: "Ein Bug ist aufgetreten"
+    validations:
+      required: true
 # textarea, l:"Beschreibe den Bug", d:Was ist das Problem? v: Ein Bug ist aufgetreten (r:true)
 
 # textarea, l: Wann tritt dieser Bug auf, d: Beschreibe die Schritte, die zu dem Bug führen
