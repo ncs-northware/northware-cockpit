@@ -1,11 +1,12 @@
 {
   "name": "cockpit-frontend",
+  "description": "Northware Cockpit next.js Frontend",
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
+    "dev": "next dev -p 50110",
     "build": "next build",
-    "start": "next start",
+    "start": "next start -p 50110",
     "lint": "next lint"
   },
   "dependencies": {

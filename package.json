@@ -1,0 +1,34 @@
+{
+    "name": "northware-cockpit",
+    "version": "0.0.1",
+    "private": "true",
+    "description": "Northware App for NCS Internal Organizing",
+    "homepage": "https://github.com/ncs-northware/northware-cockpit",
+    "bugs": "https://github.com/ncs-northware/northware-cockpit/issues",
+    "license": "MIT",
+    "author": "NCS Northware (https://github.com/ncs-northware)",
+    "contributors": [
+        "onissen (https://github.com/onissen)"
+    ],
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/ncs-northware/northware-cockpit"
+    },
+    "scripts": {
+        "dev": "concurrently -n FRONTEND,API -c auto,auto \"npm run dev:frontend\" \"npm run dev:api\"",
+
+        "dev:frontend": "cd cockpit-frontend && npm run dev",
+        "build:frontend": "cd cockpit-frontend && npm run build",
+        "start:frontend": "cd cockpit-frontend && npm run start",
+        
+        "dev:api": "cd cockpit-api && npm run dev",
+        "build:api": "cd cockpit-api && cross-env NODE_ENV=production npm run build",
+        "start:win": "cd cockpit-api && cross-env NODE_ENV=production npm start"
+    },
+    "devDependencies": {
+        "concurrently": "^8.2.1"
+    },
+    "dependencies": {
+        "cross-env": "^7.0.3"
+    }
+}
