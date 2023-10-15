@@ -4,14 +4,6 @@ title: "[Bug]: "
 labels: ["bug"]
 
 body:
-- type: input
-    attributes:
-      label: Betroffene Datei(en)
-      description: An welchen Stellen tritt der Fehler auf?
-      placeholder: z.B. index.js, components/Tablist.js oder an anderen Stellen
-      value: Noch nicht festgestellt
-    validations:
-      required: true
 - type: textarea
     attributes:
       label: Beschreibe den Bug
