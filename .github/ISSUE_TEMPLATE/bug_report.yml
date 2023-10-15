@@ -1,0 +1,44 @@
+name: Bug melden
+description: Melde einen schwerwiegenden Bug
+title: "[Bug]: "
+labels: ["bug"]
+
+body:
+- type: input
+    attributes:
+      label: Betroffene Datei(en)
+      description: An welchen Stellen tritt der Fehler auf?
+      placeholder: z.B. index.js, components/Tablist.js oder an anderen Stellen
+      value: Noch nicht festgestellt
+    validations:
+      required: true
+- type: textarea
+    attributes:
+      label: Beschreibe den Bug
+      description: Was ist das Problem?
+      value: "A bug happened!"
+    validations:
+      required: true
+- type: textarea
+    attributes:
+      label: Wann tritt dieser Bug auf?
+      description: Beschreibe die Schritte, die zu dem Bug führen
+- type: textarea
+    attributes:
+      label: Vorgesehenes Verhalten
+      description: Wie sollte sich die App eigentlich verhalten?
+- type: textarea
+    attributes:
+      label: Weitere Beschreibungen
+      description: Gibt es noch etwas zu sagen?
+- type: markdown
+    attributes:
+      value: "## Issue Einstellungen"
+- type: markdown
+    attributes:
+      value: |
+        Bitte nimm noch folgende Einstellungen vor:
+        - Vergebe das Label `general` wenn es sich um einen Issue handelt, der sich auf die ganze Northware Suite auswirkt.
+        - Vergebe das Label `cockpit` wenn es sich um einen Issue handelt, der nur Northware Cockpit betrifft.
+        - Ordne diesen Issue einem Northware Projekt zu.
+        - Ordne den Issue ggf. einem Milestone zu.
