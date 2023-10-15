@@ -5,28 +5,28 @@
 
 version: 2
 updates:
-  - package-ecosystem: npm
+  - package-ecosystem: "npm"
     directory: "/"
     shedule:
-      interval: monthly
+      interval: "monthly"
     commit-message:
-      prefix: [dependabot/root]
-      prefix-development: [dependabot/root] devDependency
+      prefix: "[dependabot/root]"
+      prefix-development: "[dependabot/root] devDependency"
       include: "scope"
     labels:
       - "dependencies"
       
-  - package-ecosystem: npm
+  - package-ecosystem: "npm"
     directory: "/comdock-api"
     shedule:
-      interval: weekly
+      interval: "weekly"
     groups:
       strapi:
         patterns:
         - "@strapi*"
     commit-message:
-      prefix: [dependabot/api]
-      prefix-development: [dependabot/api] devDependency
+      prefix: "[dependabot/api]"
+      prefix-development: "[dependabot/api] devDependency"
       include: "scope"
     labels:
       - "dependencies"
@@ -34,10 +34,10 @@ updates:
   - package-ecosystem: npm
     directory: "/comdock-frontend"
     shedule:
-      interval: weekly
+      interval: "weekly"
     commit-message:
-      prefix: [dependabot/frontend]
-      prefix-development: [dependabot/frontend] devDependency
+      prefix: "[dependabot/frontend]"
+      prefix-development: "[dependabot/frontend] devDependency"
       include: "scope"
     labels:
       - "dependencies"
