@@ -15,6 +15,11 @@ updates:
       include: "scope"
     labels:
       - "dependencies"
+    groups:
+      patch-updates:
+        update-types: "patch"
+      dev-dependencies:
+        dependency-type: "development"
       
   - package-ecosystem: "npm"
     directory: "/comdock-api"
@@ -24,6 +29,10 @@ updates:
       strapi:
         patterns:
         - "@strapi*"
+      patch-updates:
+        update-types: "patch"
+      dev-dependencies:
+        dependency-type: "development"
     commit-message:
       prefix: "[dependabot/api]"
       prefix-development: "[dependabot/api] devDependency"
