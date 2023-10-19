@@ -16,11 +16,9 @@
     },
     "scripts": {
         "dev": "concurrently -n FRONTEND,API -c auto,auto \"npm run dev:frontend\" \"npm run dev:api\"",
-
         "dev:frontend": "cd cockpit-frontend && npm run dev",
         "build:frontend": "cd cockpit-frontend && npm run build",
         "start:frontend": "cd cockpit-frontend && npm run start",
-        
         "dev:api": "cd cockpit-api && npm run dev",
         "build:api": "cd cockpit-api && cross-env NODE_ENV=production npm run build",
         "start:win": "cd cockpit-api && cross-env NODE_ENV=production npm start"
@@ -30,5 +28,6 @@
     },
     "dependencies": {
         "cross-env": "^7.0.3"
+        
     }
 }

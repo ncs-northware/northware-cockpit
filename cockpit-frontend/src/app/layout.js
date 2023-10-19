@@ -1,7 +1,6 @@
 import './globals.css'
-import { Inter } from 'next/font/google'
+import '../../node_modules/northware-theme/style/index.sass'
 
-const inter = Inter({ subsets: ['latin'] })
 
 export const metadata = {
   title: 'Create Next App',
@@ -10,8 +9,8 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
-      <body className={inter.className}>{children}</body>
+    <html lang="de">
+      <body>{children}</body>
     </html>
   )
 }
