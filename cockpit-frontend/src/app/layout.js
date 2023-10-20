@@ -1,5 +1,6 @@
+import Layout from '@/theme/components/Layout';
 import '@/theme/style/index.sass'
-
+import { Source_Sans_3 } from "@next/font/google";
 
 export const metadata = {
   title: {
@@ -8,10 +9,20 @@ export const metadata = {
   },
 }
 
+const source_sans = Source_Sans_3({
+  subsets: ['latin'],
+  display: 'swap',
+  variable: '--font-sourcesans'
+})
+
 export default function RootLayout({ children }) {
   return (
-    <html lang="de">
-      <body>{children}</body>
+    <html lang="de" className={`${source_sans.variable}`}>
+      <body>
+        <Layout>
+          {children}
+        </Layout>
+      </body>
     </html>
   )
 }
