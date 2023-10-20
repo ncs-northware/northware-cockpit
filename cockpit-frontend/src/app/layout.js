@@ -2,7 +2,10 @@ import '@/theme/style/index.sass'
 
 
 export const metadata = {
-  title: 'Northware Cockpit',
+  title: {
+    template: '%s | Northware Cockpit',
+    default: 'Northware Cockpit', // a default is required when creating a template
+  },
 }
 
 export default function RootLayout({ children }) {
