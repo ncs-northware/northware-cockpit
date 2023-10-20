@@ -1,6 +1,6 @@
 import Layout from '@/theme/components/Layout';
 import '@/theme/style/index.sass'
-import { Source_Sans_3 } from "@next/font/google";
+import { Source_Sans_3 } from "next/font/google";
 
 export const metadata = {
   title: {
