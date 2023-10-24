@@ -13,6 +13,9 @@ module.exports = {
       },
       colors: {
         'primary': colors.sky,
+        'cockpit': colors.sky,
+        'finance': colors.red,
+        'trader': colors.orange,
         'secondary': {
           'DEFAULT': '#1E1E1E',
           '50': '#f6f6f6',
