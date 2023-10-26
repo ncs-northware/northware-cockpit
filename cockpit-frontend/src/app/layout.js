@@ -1,9 +1,6 @@
-import { ApolloProvider } from '@apollo/client';
-
 import Layout from '@/theme/components/Layout';
 import '@/theme/style/index.sass'
 import { Source_Sans_3 } from "next/font/google";
-import { client } from 'helpers/graphql';
 
 
 export const metadata = {
@@ -23,11 +20,9 @@ export default function RootLayout({ children }) {
   return (
     <html lang="de" className={`${source_sans.variable}`}>
       <body>
-        <ApolloProvider client={client}>
-            <Layout>
-              {children}
-            </Layout>
-        </ApolloProvider>
+        <Layout>
+          {children}
+        </Layout>
       </body>
     </html>
   )
