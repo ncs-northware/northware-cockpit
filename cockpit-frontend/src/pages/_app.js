@@ -10,9 +10,9 @@ const source_sans = Source_Sans_3({
 export default function App({ Component, pageProps }) {
     return (
     <>
-        <main className={`${source_sans.variable} font-sans`}>
+        <div className={`${source_sans.variable} font-sans`}>
                 <Component {...pageProps} />
-        </main>
+        </div>
     </>
     )
 }
