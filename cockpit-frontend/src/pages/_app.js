@@ -1,3 +1,4 @@
+import { AuthController } from '@/theme/lib/AuthContext'
 import '@/theme/style/index.sass'
 import { Source_Sans_3 } from "next/font/google"
 
@@ -9,10 +10,10 @@ const source_sans = Source_Sans_3({
 
 export default function App({ Component, pageProps }) {
     return (
-    <>
-        <div className={`${source_sans.variable} font-sans`}>
-                <Component {...pageProps} />
-        </div>
-    </>
+        <AuthController>
+            <main className={`${source_sans.variable} font-sans`}>
+                    <Component {...pageProps} />
+            </main>
+        </AuthController>
     )
 }
