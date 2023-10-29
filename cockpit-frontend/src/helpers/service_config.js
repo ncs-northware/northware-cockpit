@@ -9,3 +9,5 @@ export const service_mainnavigation = [
         }
     },
 ]
+
+export const siteName = "Northware Cockpit"
