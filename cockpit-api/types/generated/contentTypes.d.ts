@@ -677,6 +677,80 @@ export interface PluginUsersPermissionsUser extends Schema.CollectionType {
   };
 }
 
+export interface ApiDepartmentDepartment extends Schema.CollectionType {
+  collectionName: 'departments';
+  info: {
+    singularName: 'department';
+    pluralName: 'departments';
+    displayName: 'Abteilungen';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    dept_name: Attribute.String & Attribute.Required & Attribute.Unique;
+    mail: Attribute.Email;
+    phone: Attribute.String & Attribute.DefaultTo<'0461 91314-XXXX'>;
+    fax: Attribute.String & Attribute.DefaultTo<'0461 91314-9XXXX'>;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::department.department',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::department.department',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
+export interface ApiEmployeeAddressEmployeeAddress
+  extends Schema.CollectionType {
+  collectionName: 'employees_addresses';
+  info: {
+    singularName: 'employee-address';
+    pluralName: 'employees-addresses';
+    displayName: 'Mitarbeiter Adressbuch';
+    description: '';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    first_name: Attribute.String & Attribute.Required;
+    sir_name: Attribute.String & Attribute.Required;
+    department: Attribute.Relation<
+      'api::employee-address.employee-address',
+      'oneToOne',
+      'api::department.department'
+    >;
+    position: Attribute.String;
+    phone: Attribute.String & Attribute.DefaultTo<'0461 91314-XXXX'>;
+    mail: Attribute.Email;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::employee-address.employee-address',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::employee-address.employee-address',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
 declare module '@strapi/types' {
   export module Shared {
     export interface ContentTypes {
@@ -693,6 +767,8 @@ declare module '@strapi/types' {
       'plugin::users-permissions.permission': PluginUsersPermissionsPermission;
       'plugin::users-permissions.role': PluginUsersPermissionsRole;
       'plugin::users-permissions.user': PluginUsersPermissionsUser;
+      'api::department.department': ApiDepartmentDepartment;
+      'api::employee-address.employee-address': ApiEmployeeAddressEmployeeAddress;
     }
   }
 }

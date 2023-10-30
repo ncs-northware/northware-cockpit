@@ -1,0 +1,39 @@
+{
+  "kind": "collectionType",
+  "collectionName": "employees_addresses",
+  "info": {
+    "singularName": "employee-address",
+    "pluralName": "employees-addresses",
+    "displayName": "Mitarbeiter Adressbuch",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "first_name": {
+      "type": "string",
+      "required": true
+    },
+    "sir_name": {
+      "type": "string",
+      "required": true
+    },
+    "department": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::department.department"
+    },
+    "position": {
+      "type": "string"
+    },
+    "phone": {
+      "type": "string",
+      "default": "0461 91314-XXXX"
+    },
+    "mail": {
+      "type": "email"
+    }
+  }
+}
