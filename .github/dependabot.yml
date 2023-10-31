@@ -28,7 +28,7 @@ updates:
     groups:
       strapi:
         patterns:
-        - "@strapi*"
+          - "@strapi/*"
       patch-updates:
         update-types: "patch"
       dev-dependencies:
