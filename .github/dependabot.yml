@@ -5,7 +5,48 @@
 
 version: 2
 updates:
-  - package-ecosystem: "" # See documentation for possible values
-    directory: "/" # Location of package manifests
+  - package-ecosystem: "npm"
+    directory: "/"
+    schedule:
+      interval: "monthly"
+    commit-message:
+      prefix: "[dependabot/root]"
+      prefix-development: "[dependabot/root] devDependency"
+      include: "scope"
+    labels:
+      - "dependencies"
+    groups:
+      patch-updates:
+        update-types: "patch"
+      dev-dependencies:
+        dependency-type: "development"
+
+  - package-ecosystem: "npm"
+    directory: "/cockpit-api"
     schedule:
       interval: "weekly"
+    groups:
+      strapi:
+        patterns:
+          - "@strapi/*"
+      patch-updates:
+        update-types: "patch"
+      dev-dependencies:
+        dependency-type: "development"
+    commit-message:
+      prefix: "[dependabot/api]"
+      prefix-development: "[dependabot/api] devDependency"
+      include: "scope"
+    labels:
+      - "dependencies"
+
+  - package-ecosystem: npm
+    directory: "/cockpit-frontend"
+    schedule:
+      interval: "weekly"
+    commit-message:
+      prefix: "[dependabot/frontend]"
+      prefix-development: "[dependabot/frontend] devDependency"
+      include: "scope"
+    labels:
+      - "dependencies"
