@@ -24,7 +24,7 @@
         "start:win": "cd cockpit-api && cross-env NODE_ENV=production npm start"
     },
     "devDependencies": {
-        "concurrently": "^8.2.1"
+        "concurrently": "^8.2.2"
     },
     "dependencies": {
         "cross-env": "^7.0.3"
