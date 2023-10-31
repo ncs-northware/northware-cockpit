@@ -22,7 +22,7 @@ updates:
         dependency-type: "development"
       
   - package-ecosystem: "npm"
-    directory: "/comdock-api"
+    directory: "/cockpit-api"
     schedule:
       interval: "weekly"
     groups:
@@ -41,7 +41,7 @@ updates:
       - "dependencies"
       
   - package-ecosystem: npm
-    directory: "/comdock-frontend"
+    directory: "/cockpit-frontend"
     schedule:
       interval: "weekly"
     commit-message:
