@@ -440,6 +440,39 @@ export interface ApiEmployeeAddressEmployeeAddress
   };
 }
 
+export interface ApiMainNavbarMainNavbar extends Schema.SingleType {
+  collectionName: 'main_navbars';
+  info: {
+    singularName: 'main-navbar';
+    pluralName: 'main-navbars';
+    displayName: 'Main Navbar';
+    description: '';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    mainnav_cockpit: Attribute.Component<'navlinks.main-navbar-links', true>;
+    mainnav_finance: Attribute.Component<'navlinks.main-navbar-links', true>;
+    mainnav_trader: Attribute.Component<'navlinks.main-navbar-links', true>;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::main-navbar.main-navbar',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::main-navbar.main-navbar',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
 export interface PluginUploadFile extends Schema.CollectionType {
   collectionName: 'files';
   info: {
@@ -771,6 +804,7 @@ declare module '@strapi/types' {
       'admin::transfer-token-permission': AdminTransferTokenPermission;
       'api::department.department': ApiDepartmentDepartment;
       'api::employee-address.employee-address': ApiEmployeeAddressEmployeeAddress;
+      'api::main-navbar.main-navbar': ApiMainNavbarMainNavbar;
       'plugin::upload.file': PluginUploadFile;
       'plugin::upload.folder': PluginUploadFolder;
       'plugin::i18n.locale': PluginI18NLocale;

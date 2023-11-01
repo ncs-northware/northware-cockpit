@@ -1,0 +1,18 @@
+{
+  "collectionName": "components_navlinks_main_navbar_children",
+  "info": {
+    "displayName": "Main Navbar Children",
+    "icon": "link"
+  },
+  "options": {},
+  "attributes": {
+    "label": {
+      "type": "string",
+      "required": true
+    },
+    "href": {
+      "type": "string",
+      "required": true
+    }
+  }
+}

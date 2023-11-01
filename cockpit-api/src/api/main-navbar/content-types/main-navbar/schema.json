@@ -1,0 +1,32 @@
+{
+  "kind": "singleType",
+  "collectionName": "main_navbars",
+  "info": {
+    "singularName": "main-navbar",
+    "pluralName": "main-navbars",
+    "displayName": "Main Navbar",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "mainnav_cockpit": {
+      "displayName": "Main Navbar Links",
+      "type": "component",
+      "repeatable": true,
+      "component": "navlinks.main-navbar-links"
+    },
+    "mainnav_finance": {
+      "type": "component",
+      "repeatable": true,
+      "component": "navlinks.main-navbar-links"
+    },
+    "mainnav_trader": {
+      "type": "component",
+      "repeatable": true,
+      "component": "navlinks.main-navbar-links"
+    }
+  }
+}
