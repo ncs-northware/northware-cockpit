@@ -1,0 +1,18 @@
+{
+  "kind": "singleType",
+  "collectionName": "connection_testers",
+  "info": {
+    "singularName": "connection-tester",
+    "pluralName": "connection-testers",
+    "displayName": "ConnectionTester"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "status": {
+      "type": "string"
+    }
+  }
+}

@@ -681,6 +681,35 @@ export interface PluginUsersPermissionsUser extends Schema.CollectionType {
   };
 }
 
+export interface ApiConnectionTesterConnectionTester extends Schema.SingleType {
+  collectionName: 'connection_testers';
+  info: {
+    singularName: 'connection-tester';
+    pluralName: 'connection-testers';
+    displayName: 'ConnectionTester';
+  };
+  options: {
+    draftAndPublish: false;
+  };
+  attributes: {
+    status: Attribute.String;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::connection-tester.connection-tester',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::connection-tester.connection-tester',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
 export interface ApiDepartmentDepartment extends Schema.CollectionType {
   collectionName: 'departments';
   info: {
@@ -809,6 +838,7 @@ declare module '@strapi/types' {
       'plugin::users-permissions.permission': PluginUsersPermissionsPermission;
       'plugin::users-permissions.role': PluginUsersPermissionsRole;
       'plugin::users-permissions.user': PluginUsersPermissionsUser;
+      'api::connection-tester.connection-tester': ApiConnectionTesterConnectionTester;
       'api::department.department': ApiDepartmentDepartment;
       'api::employee-address.employee-address': ApiEmployeeAddressEmployeeAddress;
       'api::main-navbar.main-navbar': ApiMainNavbarMainNavbar;
