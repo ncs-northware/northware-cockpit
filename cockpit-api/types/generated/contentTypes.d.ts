@@ -362,117 +362,6 @@ export interface AdminTransferTokenPermission extends Schema.CollectionType {
   };
 }
 
-export interface ApiDepartmentDepartment extends Schema.CollectionType {
-  collectionName: 'departments';
-  info: {
-    singularName: 'department';
-    pluralName: 'departments';
-    displayName: 'Abteilungen';
-  };
-  options: {
-    draftAndPublish: true;
-  };
-  attributes: {
-    dept_name: Attribute.String & Attribute.Required & Attribute.Unique;
-    mail: Attribute.Email;
-    phone: Attribute.String & Attribute.DefaultTo<'0461 91314-XXXX'>;
-    fax: Attribute.String & Attribute.DefaultTo<'0461 91314-9XXXX'>;
-    createdAt: Attribute.DateTime;
-    updatedAt: Attribute.DateTime;
-    publishedAt: Attribute.DateTime;
-    createdBy: Attribute.Relation<
-      'api::department.department',
-      'oneToOne',
-      'admin::user'
-    > &
-      Attribute.Private;
-    updatedBy: Attribute.Relation<
-      'api::department.department',
-      'oneToOne',
-      'admin::user'
-    > &
-      Attribute.Private;
-  };
-}
-
-export interface ApiEmployeeAddressEmployeeAddress
-  extends Schema.CollectionType {
-  collectionName: 'employees_addresses';
-  info: {
-    singularName: 'employee-address';
-    pluralName: 'employees-addresses';
-    displayName: 'Mitarbeiter Adressbuch';
-    description: '';
-  };
-  options: {
-    draftAndPublish: true;
-  };
-  attributes: {
-    empl_id: Attribute.String & Attribute.Required & Attribute.Unique;
-    first_name: Attribute.String & Attribute.Required;
-    sir_name: Attribute.String & Attribute.Required;
-    full_name: Attribute.String;
-    department: Attribute.Relation<
-      'api::employee-address.employee-address',
-      'oneToOne',
-      'api::department.department'
-    >;
-    position: Attribute.String;
-    phone: Attribute.String &
-      Attribute.Unique &
-      Attribute.DefaultTo<'0461 91314-XXXX'>;
-    mail: Attribute.Email & Attribute.Unique;
-    createdAt: Attribute.DateTime;
-    updatedAt: Attribute.DateTime;
-    publishedAt: Attribute.DateTime;
-    createdBy: Attribute.Relation<
-      'api::employee-address.employee-address',
-      'oneToOne',
-      'admin::user'
-    > &
-      Attribute.Private;
-    updatedBy: Attribute.Relation<
-      'api::employee-address.employee-address',
-      'oneToOne',
-      'admin::user'
-    > &
-      Attribute.Private;
-  };
-}
-
-export interface ApiMainNavbarMainNavbar extends Schema.SingleType {
-  collectionName: 'main_navbars';
-  info: {
-    singularName: 'main-navbar';
-    pluralName: 'main-navbars';
-    displayName: 'Main Navbar';
-    description: '';
-  };
-  options: {
-    draftAndPublish: true;
-  };
-  attributes: {
-    mainnav_cockpit: Attribute.Component<'navlinks.main-navbar-links', true>;
-    mainnav_finance: Attribute.Component<'navlinks.main-navbar-links', true>;
-    mainnav_trader: Attribute.Component<'navlinks.main-navbar-links', true>;
-    createdAt: Attribute.DateTime;
-    updatedAt: Attribute.DateTime;
-    publishedAt: Attribute.DateTime;
-    createdBy: Attribute.Relation<
-      'api::main-navbar.main-navbar',
-      'oneToOne',
-      'admin::user'
-    > &
-      Attribute.Private;
-    updatedBy: Attribute.Relation<
-      'api::main-navbar.main-navbar',
-      'oneToOne',
-      'admin::user'
-    > &
-      Attribute.Private;
-  };
-}
-
 export interface PluginUploadFile extends Schema.CollectionType {
   collectionName: 'files';
   info: {
@@ -792,6 +681,118 @@ export interface PluginUsersPermissionsUser extends Schema.CollectionType {
   };
 }
 
+export interface ApiDepartmentDepartment extends Schema.CollectionType {
+  collectionName: 'departments';
+  info: {
+    singularName: 'department';
+    pluralName: 'departments';
+    displayName: 'Abteilungen';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    dept_name: Attribute.String & Attribute.Required & Attribute.Unique;
+    mail: Attribute.Email;
+    phone: Attribute.String & Attribute.DefaultTo<'0461 91314-XXXX'>;
+    fax: Attribute.String & Attribute.DefaultTo<'0461 91314-9XXXX'>;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::department.department',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::department.department',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
+export interface ApiEmployeeAddressEmployeeAddress
+  extends Schema.CollectionType {
+  collectionName: 'employees_addresses';
+  info: {
+    singularName: 'employee-address';
+    pluralName: 'employees-addresses';
+    displayName: 'Mitarbeiter Adressbuch';
+    description: '';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    empl_id: Attribute.String & Attribute.Required & Attribute.Unique;
+    first_name: Attribute.String & Attribute.Required;
+    sir_name: Attribute.String & Attribute.Required;
+    full_name: Attribute.String;
+    department: Attribute.Relation<
+      'api::employee-address.employee-address',
+      'oneToOne',
+      'api::department.department'
+    >;
+    position: Attribute.String;
+    phone: Attribute.String &
+      Attribute.Unique &
+      Attribute.DefaultTo<'0461 91314-XXXX'>;
+    mail: Attribute.Email & Attribute.Unique;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::employee-address.employee-address',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::employee-address.employee-address',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
+export interface ApiMainNavbarMainNavbar extends Schema.SingleType {
+  collectionName: 'main_navbars';
+  info: {
+    singularName: 'main-navbar';
+    pluralName: 'main-navbars';
+    displayName: 'Main Navbar';
+    description: '';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    mainnav_cockpit: Attribute.Component<'navlinks.main-navbar-links', true>;
+    mainnav_finance: Attribute.Component<'navlinks.main-navbar-links', true>;
+    mainnav_trader: Attribute.Component<'navlinks.main-navbar-links', true>;
+    mainnav_pos: Attribute.Component<'navlinks.main-navbar-links', true>;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::main-navbar.main-navbar',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::main-navbar.main-navbar',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
 declare module '@strapi/types' {
   export module Shared {
     export interface ContentTypes {
@@ -802,15 +803,15 @@ declare module '@strapi/types' {
       'admin::api-token-permission': AdminApiTokenPermission;
       'admin::transfer-token': AdminTransferToken;
       'admin::transfer-token-permission': AdminTransferTokenPermission;
-      'api::department.department': ApiDepartmentDepartment;
-      'api::employee-address.employee-address': ApiEmployeeAddressEmployeeAddress;
-      'api::main-navbar.main-navbar': ApiMainNavbarMainNavbar;
       'plugin::upload.file': PluginUploadFile;
       'plugin::upload.folder': PluginUploadFolder;
       'plugin::i18n.locale': PluginI18NLocale;
       'plugin::users-permissions.permission': PluginUsersPermissionsPermission;
       'plugin::users-permissions.role': PluginUsersPermissionsRole;
       'plugin::users-permissions.user': PluginUsersPermissionsUser;
+      'api::department.department': ApiDepartmentDepartment;
+      'api::employee-address.employee-address': ApiEmployeeAddressEmployeeAddress;
+      'api::main-navbar.main-navbar': ApiMainNavbarMainNavbar;
     }
   }
 }

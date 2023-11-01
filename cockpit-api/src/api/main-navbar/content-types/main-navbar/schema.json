@@ -27,6 +27,11 @@
       "type": "component",
       "repeatable": true,
       "component": "navlinks.main-navbar-links"
+    },
+    "mainnav_pos": {
+      "type": "component",
+      "repeatable": true,
+      "component": "navlinks.main-navbar-links"
     }
   }
 }
