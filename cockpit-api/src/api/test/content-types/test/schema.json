@@ -4,7 +4,8 @@
   "info": {
     "singularName": "test",
     "pluralName": "tests",
-    "displayName": "Test"
+    "displayName": "Test",
+    "description": ""
   },
   "options": {
     "draftAndPublish": false
@@ -19,6 +20,12 @@
     },
     "description": {
       "type": "richtext"
+    },
+    "type": {
+      "type": "enumeration",
+      "enum": [
+        "test"
+      ]
     }
   }
 }

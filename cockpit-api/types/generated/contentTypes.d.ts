@@ -828,6 +828,7 @@ export interface ApiTestTest extends Schema.CollectionType {
     singularName: 'test';
     pluralName: 'tests';
     displayName: 'Test';
+    description: '';
   };
   options: {
     draftAndPublish: false;
@@ -836,6 +837,7 @@ export interface ApiTestTest extends Schema.CollectionType {
     name: Attribute.String;
     price: Attribute.Decimal;
     description: Attribute.RichText;
+    type: Attribute.Enumeration<['test']>;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     createdBy: Attribute.Relation<'api::test.test', 'oneToOne', 'admin::user'> &
