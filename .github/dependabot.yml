@@ -30,6 +30,13 @@ updates:
       strapi:
         patterns:
         - "@strapi*"
+        - "strapi*"
+      strapi-admin-runners:
+        patterns:
+        - "react"
+        - "react-dom"
+        - "react-router-dom"
+        - "styled-components"
       patch-updates:
         update-types: 
         - "patch"
