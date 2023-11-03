@@ -9,6 +9,8 @@ updates:
     directory: "/"
     schedule:
       interval: "monthly"
+    assignees:
+      - "onissen"
     commit-message:
       prefix: "[dependabot/root]"
       prefix-development: "[dependabot/root] devDependency"
@@ -26,6 +28,8 @@ updates:
     directory: "/cockpit-api"
     schedule:
       interval: "weekly"
+    assignees:
+      - "onissen"
     groups:
       strapi:
         patterns:
@@ -53,6 +57,8 @@ updates:
     directory: "/cockpit-frontend"
     schedule:
       interval: "weekly"
+    assignees:
+      - "onissen"
     commit-message:
       prefix: "[dependabot/frontend]"
       prefix-development: "[dependabot/frontend] devDependency"
