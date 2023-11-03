@@ -18,7 +18,7 @@ updates:
     groups:
       patch-updates:
         update-types: 
-          - "patch"
+        - "patch"
       dev-dependencies:
         dependency-type: "development"
 
@@ -29,10 +29,10 @@ updates:
     groups:
       strapi:
         patterns:
-          - "@strapi/*"
+        - "@strapi*"
       patch-updates:
         update-types: 
-          - "patch"
+        - "patch"
       dev-dependencies:
         dependency-type: "development"
     commit-message:
