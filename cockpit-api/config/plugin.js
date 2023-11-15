@@ -6,5 +6,10 @@ module.exports = ({ env }) => ({
         // See `Config` section.
       },
     },
+    'graphql':{
+      config: {
+        defaultLimit: -1
+      }
+    }
     //...
   });

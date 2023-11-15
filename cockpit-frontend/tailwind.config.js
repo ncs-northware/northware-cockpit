@@ -3,7 +3,7 @@ const colors = require('tailwindcss/colors')
 module.exports = {
   content: [
     './src/pages/**/*.{js,ts,jsx,tsx,mdx}',
-    './src/components/**/*.{js,ts,jsx,tsx,mdx}',
+    './src/content-components/**/*.{js,ts,jsx,tsx,mdx}',
     './src/theme/components/**/*.{js,ts,jsx,tsx,mdx}',
   ],
   theme: {
@@ -13,6 +13,7 @@ module.exports = {
       },
       colors: {
         'primary': colors.sky,
+        'onPrimary': colors.white,
         'cockpit': colors.sky,
         'finance': colors.red,
         'trader': colors.orange,
