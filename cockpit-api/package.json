@@ -17,8 +17,8 @@
     "better-sqlite3": "9.1.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "react-router-dom": "^5.3.4",
-    "styled-components": "^5.3.3"
+    "react-router-dom": "^6.20.0",
+    "styled-components": "^6.0.9"
   },
   "strapi": {
     "uuid": "9722ad82-9bdd-4380-bcbe-7b2ea111dc8e"
