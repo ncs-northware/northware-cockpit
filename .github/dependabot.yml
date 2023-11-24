@@ -34,17 +34,19 @@ updates:
       time: "14:00"
     assignees:
       - "onissen"
+
+    ignore:
+      -dependency-name: "react"
+      -dependency-name: "react-dom"
+      -dependency-name: "react-router-dom"
+      -dependency-name: "styled-components"
+      # Those dependencies are used by the Strapi Admin Panel. Updating them automatically will end in broken Strapi Admin.
+    
     groups:
       strapi:
         patterns:
         - "@strapi*"
         - "strapi*"
-      strapi-admin-runners:
-        patterns:
-        - "react"
-        - "react-dom"
-        - "react-router-dom"
-        - "styled-components"
       patch-updates:
         update-types: 
         - "patch"
