@@ -16,7 +16,7 @@
     },
     "scripts": {
         "dev": "concurrently -n FRONTEND,API -c auto,auto \"npm run dev:frontend\" \"npm run dev:api\"",
-        "depupdate": "concurrently -n ROOT,FRONTEND,API -c auto,auto,auto \"npm i\" \"cd cockpit-frontend && npm i\" \"cd cockpit-api && npm i && npm run build\"",
+        "depupdate": "concurrently -n ROOT,FRONTEND,API -c auto,auto,auto \"npm i\" \"cd cockpit-frontend && npm i\" \"cd cockpit-api && npm i\"",
         "dev:frontend": "cd cockpit-frontend && npm run dev",
         "build:frontend": "cd cockpit-frontend && npm run build",
         "start:frontend": "cd cockpit-frontend && npm run start",
